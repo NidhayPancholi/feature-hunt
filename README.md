@@ -100,33 +100,8 @@ You can now create an account and mange the products you are a part of! This inc
 
 ## Getting Started
 #### Before you get started, if you are using Windows, please visit our [wiki page on Windows development](https://github.com/CSC510-Group-25/feature-hunt/wiki/How-to-develop-with-Windows).
-There are two ways to install and develop for featurehunt 
 
-1. Using Docker
-
-2. Using Local machine
-
-## Installation With Docker.
-
-#### 1.  Follow the steps to install Docker for your OS
-```
-https://docs.docker.com/get-docker
-```
-#### 2. Git clone the Repository using 
-```
-git clone https://github.com/Ashnayak/feature-hunt.git
-```
-
-#### 3. Run the following Commands
-```
-cd feature-hunt
-
-docker-compose up --build (This is only needed when you're running the project for the first time. Upon building once, you can run this command without providing --build option)
-```
-
-This will run two docker containers. The frontend will run on port 3000 and the backend will run on port 5000
-
-## Installation in Local Machine without Docker.
+## Installation in Local Machine.
 
 ### First Time Setup
 
@@ -137,38 +112,21 @@ git clone https://github.com/Ashnayak/feature-hunt.git
 #### 2. Run the following Commands
 ```
 cd feature-hunt
+cd app
 ```
->Optional: In the project directory run `git config --local core.hooksPath hooks` to make sure you have access to the Git Hooks.
-Run the following commands in order:
-
-#### 3. `npm install`
-
-Installs the dependencies for the React App
-
-#### 4. `pip install -r backend/requirements.txt`
+#### 3. `pip install -r backend/requirements.txt`
 
 Installs the requirements for the Flask API
 
-#### 5. `yarn start`
+#### 4. `python app.py`
 
-Runs the frontend React app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the Flask app in the development mode.\
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-To run backend flask api in development mode:  
- 
- export DB="mongodb+srv://bot:bot123@feature-hunt.6gqvj.mongodb.net/feature-hunt?retryWrites=true&w=majority"
 
- export ROOT_PATH="./"
-
-#### 6. `yarn start-api`
-
-Runs the backend flask API in development mode.\
-The API runs on [http://localhost:5000](http://localhost:5000).
-
-Requests made to [http://localhost:3000](http://localhost:3000) that don't exist on the react server are automatically forwarded to this API
 
 
 ## Connecting with a Database
@@ -176,29 +134,6 @@ Requests made to [http://localhost:3000](http://localhost:3000) that don't exist
 > We use Mongo Cloud Atlas for our project as we find it very convenient. You may choose to use a local mongodb instance or run a docker container
 
 #### Check out our [tutorial](https://github.com/CSC510-Group-25/feature-hunt/wiki/Getting-Started-with-Database-Development:-Connection-and-Setup) to get started with creating and connecting to a database.
-
-> You can also connect to the database from your shell using [mongosh](https://docs.mongodb.com/mongodb-shell/)
-
-## Other Available Scripts
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn lint`
-
-Applies Prettier to all .js files.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Deployment
 
